@@ -33,7 +33,99 @@ int main()
 	a << "-Daniel_Simek" << endl;
 	a << "_Samuel_Vnuk" << endl;
 	a.close();
-	
+	while (o == 1)
+	{
+		cout << "Zadaj poradove cislo ziaka aby program nasiel jeho meno v databaze." << endl;
+		cin >> b;
+		d.open("ziaci1.txt");
+
+		if (b == 1) {
+			d.ignore(999, '1');
+			d >> c;
+		}
+		else if (b == 2) {
+			d.ignore(999, '2');
+			d >> c;
+
+		}
+		else if (b == 3) {
+			d.ignore(999, '3');
+			d >> c;
+
+		}
+		else if (b == 4) {
+			d.ignore(999, '4');
+			d >> c;
+
+		}
+		else if (b == 5) {
+			d.ignore(999, '5');
+			d >> c;
+
+		}
+		else if (b == 6) {
+			d.ignore(999, '6');
+			d >> c;
+
+		}
+		else if (b == 7) {
+			d.ignore(999, '7');
+			d >> c;
+
+		}
+		else if (b == 8) {
+			d.ignore(999, '8');
+			d >> c;
+
+		}
+		else if (b == 9) {
+			d.ignore(999, '9');
+			d >> c;
+
+		}
+		else if (b == 10) {
+			d.ignore(999, '.');
+			d >> c;
+
+		}
+		else if (b == 11) {
+			d.ignore(999, '<');
+			d >> c;
+
+		}
+		else if (b == 12) {
+			d.ignore(999, '>');
+			d >> c;
+
+		}
+		else if (b == 13) {
+			d.ignore(999, '-');
+			d >> c;
+
+		}
+		else if (b == 14) {
+			d.ignore(999, '_');
+			d >> c;
+
+		}
+		else if (b > 14) {
+			cout << "ziak s tymto poradovym cislom nie je v databaze!" << endl;
+		}
+
+		else if (b == 0) {
+			cout << "ziak poradovym cislom 0 neexistuje!" << endl;
+		}
+		d.close();
+		cout << "vyhladal som ziaka v databaze, jeho meno najdete v subore ziak.txt" << endl;
+
+		i.open("ziak.txt");
+		i << c;
+		i.close();
+		cout << "chcete este vyhladat meno ziaka v databaze ? Ak ano zadajte 1." << endl;
+		cin >> o;
+	}
+	cout << "Dakujem za pouzitie databazy ziakov." << endl;
+	return 0;
 }
 
 
