@@ -1,0 +1,16 @@
+1Simon_Blazek
+2Tomas_Cicman
+3Frantisek_Findura
+4Tomas_Fojtik
+5Michal_Franc
+6Denis_Hascik
+7Martin_Kubista
+8Marek_Kulla
+9Adrian_Liba
+.Kristian_Mazur
+<Marek_Michal
+>Nicolas_Repan
+-Daniel_Simek
+_Samuel_Vnuk
+/ziak_s_tymto_poradovym_cislom_nie_je_v_databaze!
+*ziak_s_poradovym_cislom_0_neexistuje!

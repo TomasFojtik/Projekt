@@ -32,6 +32,8 @@ int main()
 	a << ">Nicolas_Repan" << endl;
 	a << "-Daniel_Simek" << endl;
 	a << "_Samuel_Vnuk" << endl;
+	a << "/ziak_s_tymto_poradovym_cislom_nie_je_v_databaze!" << endl;
+	a << "*ziak_s_poradovym_cislom_0_neexistuje!" << endl;
 	a.close();
 	while (o == 1)
 	{
@@ -109,19 +111,23 @@ int main()
 
 		}
 		else if (b > 14) {
-			cout << "ziak s tymto poradovym cislom nie je v databaze!" << endl;
+			d.ignore(999, '/');
+			d >> c;
+			
 		}
 
 		else if (b == 0) {
-			cout << "ziak poradovym cislom 0 neexistuje!" << endl;
+			d.ignore(999,'*');
+			d >> c;
+			
 		}
 		d.close();
-		cout << "vyhladal som ziaka v databaze, jeho meno najdete v subore ziak.txt" << endl;
+		cout << "Vyhladal som ziaka v databaze, jeho meno najdete v subore ziak.txt" << endl;
 
 		i.open("ziak.txt");
 		i << c;
 		i.close();
-		cout << "chcete este vyhladat meno ziaka v databaze ? Ak ano zadajte 1." << endl;
+		cout << "Chcete este vyhladat meno ziaka v databaze ? Ak ano zadajte 1." << endl;
 		cin >> o;
 	}
 	cout << "Dakujem za pouzitie databazy ziakov." << endl;
