@@ -1,6 +1,7 @@
 // Projekt.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#include <ctime>
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -11,11 +12,14 @@ int main()
 	ifstream d;
 	ofstream a;
 	ofstream i;
-	int b;
 	string c;
+	int b;
 	int o = 1;
-	
-	
+	int f;
+	int r;
+
+
+
 	cout << "Vytajte v databaze ziakov." << endl;
 	a.open("ziaci1.txt");
 	a << "1Simon_Blazek" << endl;
@@ -35,10 +39,33 @@ int main()
 	a << "/ziak_s_tymto_poradovym_cislom_nie_je_v_databaze!" << endl;
 	a << "*ziak_s_poradovym_cislom_0_neexistuje!" << endl;
 	a.close();
-	while (o == 1)
+	while (o)
 	{
-		cout << "Zadaj poradove cislo ziaka aby program nasiel jeho meno v databaze." << endl;
-		cin >> b;
+		cout << "Chces vybrat ziaka nahodne alebo podla p.c.?" << endl;
+		cout << "Ak nahodne zadaj 1" << endl;
+		cout << "Ak podla p.c zadaj 2" << endl;
+
+
+		cin >> f;
+		switch (f) {
+		case 1:
+			srand((unsigned)time(NULL));
+			b = rand() % 14;
+
+
+
+			break;
+		case 2:
+			cout << "Zadaj poradove cislo ziaka aby program nasiel jeho meno v databaze." << endl;
+			cin >> b;
+			break;
+		default:
+			cout << "chyba" << endl;
+		}
+
+
+
+
 		d.open("ziaci1.txt");
 
 		if (b == 1) {
@@ -113,13 +140,13 @@ int main()
 		else if (b > 14) {
 			d.ignore(999, '/');
 			d >> c;
-			
+
 		}
 
 		else if (b == 0) {
-			d.ignore(999,'*');
+			d.ignore(999, '*');
 			d >> c;
-			
+
 		}
 		d.close();
 		cout << "Vyhladal som ziaka v databaze, jeho meno najdete v subore ziak.txt" << endl;
