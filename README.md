@@ -7,3 +7,4 @@ Použité kritériá:
 -Uloženie výstupu do súbora
 -Použitý switch
 -Náhodné čísla 
+-Štruktúra
