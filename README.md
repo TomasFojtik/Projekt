@@ -5,3 +5,5 @@ Použité kritériá:
 -Úprava-výpis v konzoli + Kód Úprava
 -Načítanie vstupu zo súbora
 -Uloženie výstupu do súbora
+-Použitý switch
+-Náhodné čísla 
