@@ -14,13 +14,15 @@ int main()
 	ofstream i;
 	string c;
 	int b;
-	int o = 1;
+	int o;
 	int f;
-	int r;
+	
 
 
 
 	cout << "Vytajte v databaze ziakov." << endl;
+	cin.get();
+	system("CLS");
 	a.open("ziaci1.txt");
 	a << "1Simon_Blazek" << endl;
 	a << "2Tomas_Cicman" << endl;
@@ -39,14 +41,17 @@ int main()
 	a << "/ziak_s_tymto_poradovym_cislom_nie_je_v_databaze!" << endl;
 	a << "*ziak_s_poradovym_cislom_0_neexistuje!" << endl;
 	a.close();
-	while (o)
+
+ do 
 	{
+		
 		cout << "Chces vybrat ziaka nahodne alebo podla p.c.?" << endl;
 		cout << "Ak nahodne zadaj 1" << endl;
 		cout << "Ak podla p.c zadaj 2" << endl;
-
-
+		
 		cin >> f;
+		cin.get();
+		system("CLS");
 		switch (f) {
 		case 1:
 			srand((unsigned)time(NULL));
@@ -150,13 +155,19 @@ int main()
 		}
 		d.close();
 		cout << "Vyhladal som ziaka v databaze, jeho meno najdete v subore ziak.txt" << endl;
-
+		
 		i.open("ziak.txt");
 		i << c;
 		i.close();
 		cout << "Chcete este vyhladat meno ziaka v databaze ? Ak ano zadajte 1." << endl;
 		cin >> o;
+		cin.get();
+		system("CLS");
 	}
+	while (o == 1);
+
+	
+	
 	cout << "Dakujem za pouzitie databazy ziakov." << endl;
 	return 0;
 }
